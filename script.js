@@ -30,9 +30,9 @@ const questions = [
 ]
 
 const gifs = [
-    "./assets/sad-dudu.gif",
-    "./assets/dudu-angry.gif",
-    "./assets/cat.gif",
+    "sad-dudu.gif",
+    "dudu-angry.gif",
+    "cat.gif",
 ]
 
 noBtn.addEventListener("click", () => {
@@ -134,3 +134,4 @@ function loadQuestion() {
 }
 
 loadQuestion();
+
