@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    top: -20px;
+    color: red;
+    animation: fall linear forwards;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+.card {
+    background: #ffc6d9;
+    width: 90%;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    position: relative;
+    display: none;
+    min-height: 90vh;
+    max-height: 95vh;
+    overflow-y: auto;
+    justify-content: center;
+}
+
+.gif {
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    margin: 10px;
+}
+
+.btns {
+    position: relative;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 35px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn {
+    background: red;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+#no {
+    background: blue;
+    color: white;
+    margin-left: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+.gift-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gift {
+    width: 100%;
+    max-width: 320px;
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    margin: 20px;
+    transition: all 0.3s ease;
+}
+
+.gift img {
+    background: white;
+}
+
+.gift:hover {
+    transform: translateY(-10px) scale(1.05);
+    /* lifts and slightly grows */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    /* bigger shadow */
+    background: white;
+    color: #000;
+}
+
+/* Quiz card */
+.quiz-card {
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    /* transparent */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.option {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background: white;
+    color: #000;
+    transition: 0.2s;
+}
+
+.option:hover {
+    background: #ff5f8a;
+    color: white;
+}
+
+/* Message OUTSIDE card */
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+.letter {
+    background-color: lightgoldenrodyellow;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    line-height: 1.6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.images {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    background: lightgoldenrodyellow;
+    height: 340px;
+    padding: 10px 20px;
+    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.images:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+.images img{
+    width: 240px;
+}
+
+#gift3,
+#video,
+#gift2 {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #ff5f8a rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    font-family: 'Playfair Display';
+    margin: 10px;
+    font-size: clamp(28px, 6vw, 60px);
+}
+
+h2 {
+    font-family: 'Playfair Display';
+}
+
+p {
+    font-size: clamp(16px, 3.5vw, 20px);
+    line-height: 1.6;
+}
+
+.card {
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#yes {
+    transition: transform 0.3s ease;
+}
+
+#yes:active {
+    transform: scale(1.25);
+}
+
+
+.fade-btn {
+    transition: opacity 0.3s ease;
+}
+
+.fade-btn:active {
+    opacity: 0.4;
+}
+
+.circle-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-btn::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease;
+}
+
+.circle-btn:active::after {
+    transform: translate(-50%, -50%) scale(25);
+}
+
+.fade-page {
+    transform: translateY(20px);
+}
+
+.fade-page.active {
+    transform: translateY(0);
+}
+
+video {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+}
+label{
+    font-family: "Dancing Script",cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+        max-width: 280px;
+        margin: 8px auto;
+    }
+
+    .btns {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
