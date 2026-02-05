@@ -70,7 +70,7 @@ const quiz = [
     {
         question: "Who is the absolute 'Boss' in this relationship ?",
         options: [
-            { text: "Obisously You", correct: true },
+            { text: "Obviously You", correct: true },
             { text: "Me", correct: false },
             { text: "My Mom", correct: false }
         ]
@@ -134,4 +134,5 @@ function loadQuestion() {
 }
 
 loadQuestion();
+
 
