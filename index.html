@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <section class="card" id="home">
+        <img class="gif" src="./assets/dudu-cute.gif" id="gif" alt="Peach goma gif">
+        <br>
+        <h1 id="question">Will you be mine 🥺?</h1>
+        <br>
+        <p>
+            You is The Best Thing that has ever happened to me.
+        </p>
+        <br>
+        <div class="btns">
+            <button id="yes" class="btn zoom-btn" onclick="showPage('purpose')">YES</button>
+            <button id="no">NO</button>
+        </div>
+    </section>
+    <section class="card" id="purpose">
+        <img class="gif" src="./assets/peach-goma.gif" alt="">
+        <br>
+        <h1>Happy Valentine Day Baby! 💍</h1>
+        <br>
+        <p>
+            Every second with you is a celebration. You are the spark that makes my world so much brighter.
+        </p>
+        <br>
+        <button class="btn fade-btn" onclick="showPage('gifts')">SEE MY GIFTS...</button>
+    </section>
+    <section id="gifts" class="card">
+        <h1>Something for You</h1>
+        <div class="gift-wrapper">
+            <div class="gift" onclick="showPage('gift1')">
+                <img class="gif" src="./assets/happy-cat.gif" alt="" style="background: transparent;">
+                <h2>Gift 1</h2>
+            </div>
+            <div class="gift" onclick="showPage('gift2')">
+                <img class="gif" src="./assets/quby-hearts.gif" alt="">
+                <h2>Gift 2</h2>
+            </div>
+            <div class="gift" onclick="showPage('gift3')">
+                <img class="gif" src="./assets/cute-cat.gif" alt="">
+                <h2>Gift 3</h2>
+            </div>
+        </div>
+        <button class="btn circle-btn" onclick="showPage('video')">FINALLY...</button>
+    </section>
+    <section class="card fade-page" id="gift1">
+        <h1>Quiz for you 😚</h1>
+        <div class="quiz-card">
+            <h2 id="questions">Question here</h2>
+            <div id="options"></div>
+        </div>
+
+        <div id="message" class="message"></div>
+        <button class="btn fade-page" onclick="showPage('gifts')"><i class="fas fa-arrow-left"></i> BACK</button>
+    </section>
+    <section class="card fade-page" id="gift2">
+        <h1>A Letter for You 💌</h1>
+        <div class="letter">
+            Hey dear,<br><br>
+            More than anything I will do whatever it takes to have my kids the same eyes as you.
+            I want to experience everything with you or I will never. I will never stop telling you that I need you
+            my love, I don't know I will be crazy if you ever just touch me. I swear just imagine my happiness if I will make you mine. If we met I want to hug you tight and never leave you and then start kissing hardly .
+            I can write alot alot alot about you the whole world's ink will disappear If i write that much.💖
+            <br><br>
+            Yours truly.
+            <br>
+        </div>
+        <button class="btn fade-page" onclick="showPage('gifts')"><i class="fas fa-arrow-left"></i> BACK</button>
+    </section>
+    <section class="card fade-page" id="gift3">
+        <h1>Look at this cutie 😭</h1>
+        <div class="image-row">
+            <div class="images"  style="transform: rotate(-2deg);">
+                <img src="./assets/image-1.jpeg" alt="Smile">
+                <br><br>
+                <label for="">Love Drop</label>
+            </div>
+            <div class="images"  style="transform: rotate(2deg);">
+                <img src="./assets/image-2.jpeg" alt="Smile">
+                <br><br>
+                <label for="">Free Beauty</label>
+            </div>
+            <div class="images"  style="transform: rotate(-2deg);">
+                <img src="./assets/image-3.jpeg" alt="Smile">
+                <br><br>
+                <label for="">Heart in Motion</label>
+            </div>
+        </div>
+        <div class="image-row">
+            <div class="images" style="transform: rotate(2deg);">
+                <img src="./assets/image-4.jpeg" alt="Smile">
+                <br><br>
+                <label for="">Warm Smile</label>
+            </div>
+            <div class="images"  style="transform: rotate(-2deg);">
+                <img src="./assets/image-5.jpeg" alt="Smile">
+                <br><br>
+                <label for="">Soft Reflection</label>
+            </div>
+            <div class="images"  style="transform: rotate(2deg);">
+                <img src="./assets/image-6.jpeg" alt="Smile">
+                <br><br>
+                <label for="">Dreamy Look</label>
+            </div>
+        </div>
+        <button class="btn fade-page" onclick="showPage('gifts')"><i class="fas fa-arrow-left"></i> BACK</button>
+    </section>
+    <section id="video" class="card">
+        <h1>You are my forever 🧿❤️!</h1>
+        <video controls src="./assets/video.mp4"></video>
+        <p >I love you more than words can say.❤️<br>
+        No matter where life takes us. My heart will always choose you. Thank you for<br> being my peace, my smile, my love. This Valentine's Day and every day after, 
+            <br>I'm greatful to call you mine.
+        </p>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
